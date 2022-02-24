@@ -48,4 +48,4 @@ class Stack:
             print_list.append(point.get_value())
             pointer = pointer.get_next_node()
         print_list.reverse()
-        print("{0} Stack: {1}".format(self.get_name(), print_list)
+        print("{0} Stack: {1}".format(self.get_name(), print_list))
