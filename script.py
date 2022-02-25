@@ -23,4 +23,19 @@ for i in range(num_disks, 0, -1):
     left_stack.push(i)
     
 num_optimal_moves = (2**num_disks) - 1
-print("\nThe fastest you can solve this game is in {x} moves!\n".format(x=num_optimal_moves))
+print("\nThe fastest you can solve this game is in {0} moves!\n".format(num_optimal_moves))
+
+# Getting user input
+def get_input():
+    choices = [stack.get_name()[0] for stack in stacks]
+    while True:
+        for i in range(len(stacks)):
+            name = stacks[i].get_name()
+            letter = choices[i]
+            print("\nEnter {0} for {1}".format(letter, name))
+        user_input = input("\nAnswer: ")
+        if user_input.upper() in choices:
+            for i in range(len(stacks)):
+                if user_input.upper() == choices[i]:
+                    return stacks[i]
+                    
